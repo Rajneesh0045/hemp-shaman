@@ -1,0 +1,176 @@
+::-webkit-scrollbar{display:none}
+
+a{
+  color: #fff;
+  text-decoration: none;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (min-width:320px) {
+  .container{
+    width: 100%;
+    height: 100vmax;
+    position: relative;
+  }
+  .section{
+    width: 100%;
+    height: 100%;
+    background: black;
+  }
+  .section img{
+  width: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: top;
+  transform: translate(-50%,-50%) rotateY(90deg);
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: rgba(225,225,225,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Mystery Quest', cursive;
+  }
+  footer div{
+      padding: 8px 10px
+    }
+    .foot-div a{
+      padding: 5px 10px;
+      border-radius: 3px;
+      transition-duration: 300ms;
+    }
+    .foot-div a:hover{
+      background:#000;
+      color: rgb(17,251, 13);
+    }
+
+    .social a{
+      padding: 8px 10px;
+      transition-duration: 300ms;
+      font-size: 23px;
+    }
+    .social a:hover{
+      color: #ddd;
+    }
+
+    .About-us,
+    .contact{
+      width: 100%;
+      height: 80%;
+      background: rgba(255,255,255,0.2);
+      color: #eee;
+      font-size:20px;
+      font-family: 'Source Sans Pro', sans-serif;
+      border-radius: 3px;
+      position: absolute;
+      top: 50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+      z-index: 9;
+      display: none;
+    }
+    .About-us{
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+    }
+    .About-us .fa-times-circle,
+    .contact .fa-times-circle{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .About-us t{
+      position: absolute;
+      width: 90%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+}
+@media only screen and (min-width:580px) {
+  .container{
+    height: 100vmin;
+  }
+  .section img{
+  width: 700px;
+}
+  .About-us{
+    width: 400px;
+    height:400px;
+  }
+  .contact{
+    height: 450px;
+    width: 500px;
+  }
+}
+
+@keyframes flipInX {
+  from {
+    transform: translate(-50%,-50%) perspective(400px) rotate3d(1, 0, 0, 70deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform:translate(-50%,-50%) perspective(400px) rotate3d(1, 0, 0, -50deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform:translate(-50%,-50%) perspective(400px) rotate3d(1, 0, 0, 30deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform:translate(-50%,-50%) perspective(400px) rotate3d(1, 0, 0, -15deg);
+  }
+
+  to {
+    transform:translate(-50%,-50%) perspective(400px) rotate3d(1, 0, 0, 0deg) ;
+  }
+}
+
+.flipInX {
+  backface-visibility: visible !important;
+  animation: flipInX 1.5s 1s forwards;
+}
+
+.show-contact{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.hide-contact{
+  display: none;
+}
+
+.contact .people{
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.contact .people .individual{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact .people .individual name{
+  font-size: 20px;
+}
+.contact .people .individual i{
+  padding: 5px 10px;
+}

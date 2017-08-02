@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <title>Hemp Shaman</title>
+    <link rel="icon" href="images/hs.png">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Mystery+Quest" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" media="none" onload="if(media!='all')media='all'" async>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="none" onload="if(media!='all')media='all'" />
+  </head>
+  <body>
+    <div class="container">
+    <section class="section">
+        <img class="flipInX logo" src="images/hs.png" alt="Hemp Shaman" />
+    </section>
+     <footer>
+        <div class="foot-div">
+           <a href="#" id="about" >About</a>
+           <a href="#" id="contact">Contact Us</a>
+        </div>
+        <div class="social">
+          <a href="https://www.facebook.com/HempShamanIndia" target="_blank"><i class="fa fa-facebook-square not-avail" aria-hidden="true"></i></a>
+          <a href="https://www.twitter.com/HempShamanIndia" target="_blank"><i class="fa fa-twitter-square not-avail" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/HempShamanIndia" target="_blank"><i class="fa fa-instagram not-avail" aria-hidden="true"></i></a>
+        </div>
+      </footer>
+      <div class="About-us">
+        <i class="fa fa-times-circle" aria-hidden="true"></i>
+        <t>Hemp Shaman is a company based in Bengaluru, India. Our mission is to bring Hemp into the modern culture.We believe in the potential of Hemp and how it can change and impact the commercial and consumer world and we are going to be your guide for that. We will be soon launching our clothing store. A lot more additions are on the way, Stay wired and contact us for any more information.</t>
+      </div>
+      <div class="contact">
+        <i class="fa fa-times-circle" aria-hidden="true"></i>
+        <div class="people">
+          <div class="individual">
+            <name><strong>Upendra Singh</strong></name>
+            <email><i class="fa fa-envelope" aria-hidden="true"></i>upendra@hempshaman.com</email>
+            <phone><i class="fa fa-phone" aria-hidden="true"></i>+91 7337784459</phone>
+          </div>
+          <div class="individual">
+            <name><strong>Melvine Mathew</strong></name>
+            <email><i class="fa fa-envelope" aria-hidden="true"></i>melvine@hempshaman.com</email>
+            <phone><i class="fa fa-phone" aria-hidden="true"></i>+91 8050169369</phone>
+          </div>
+          <div class="individual">
+            <name><strong>Sarv Singh</strong></name>
+            <email><i class="fa fa-envelope" aria-hidden="true"></i>sarv@hempshaman.com</email>
+            <phone><i class="fa fa-phone" aria-hidden="true"></i>+91 9916912450</phone>
+          </div>
+          <div class="individual">
+            <p>Write to us at <br><i class="fa fa-envelope" aria-hidden="true"></i> support@hempshaman.com</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script>
+    $('#about').click(function() {
+        $('.contact').fadeOut(200);
+        $('.logo').fadeOut(150);
+        $('.About-us').fadeIn(300);
+      });
+
+      $('.fa-times-circle').click(function() {
+        $('.About-us').fadeOut(200);
+        $('.logo').slideDown(350);
+        $('.contact').delay(100).fadeOut(200).addClass('hide-contact').removeClass('show-contact');
+      });
+
+      $('#contact').click(function() {
+        $('.About-us').fadeOut(200);
+        $('.logo').fadeOut(150);
+        $('.contact').delay(100).fadeIn(200).addClass('show-contact').removeClass('hide-contact');
+      });
+
+    </script>
+
+    </body>
+</html>
